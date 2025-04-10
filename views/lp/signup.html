@@ -1,11 +1,17 @@
 {{ template "form_header.html" . }}
-<form class="contact100-form validate-form">
+<div class="contact100-form validate-form">
 	<span class="contact100-form-title">
 		Cadastre-se
 	</span>
 
-	<div class="mt-2 mb-4 alert alert-danger">
-		Email existente no sistema!
+	{{ if .flash }}
+		<div class="mt-2 mb-4 alert alert-danger">
+			{{ .flash }}!
+		</div>
+	{{ end }}
+
+	<div class="mt-2 mb-4 alert alert-danger" style="display: none;" id="alerta-jquery">
+		{{ .flash }}!
 	</div>
 
 	<div class="wrap-input100 validate-input" data-validate="Fullname is required">
@@ -35,7 +41,7 @@
 	<div class="container-contact100-form-btn">
 		<div class="wrap-contact100-form-btn">
 			<div class="contact100-form-bgbtn"></div>
-			<button class="contact100-form-btn">
+			<button class="contact100-form-btn" onclick="cadastro(this)" role="button">
 				<span>
 					Cadastrar
 					<i class="fa fa-long-arrow-right m-l-7" aria-hidden="true"></i>
@@ -47,5 +53,5 @@
 	<div class="mt-3">
 		<span>Por favor leia as nossas <a href="http://google.com" target="_blank" rel="noopener noreferrer">políticas</a> e <a href="http://google.com" target="_blank" rel="noopener noreferrer">privacidade</a>.</span>
 	</div>
-</form>
+</div>
 {{ template "form_footer.html" }}

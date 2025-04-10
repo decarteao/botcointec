@@ -51,6 +51,47 @@
             }
         })
     }
+    function cadastro(btn){
+        username = $('input[name="username"]').val()
+        password = $('input[name="password"]').val()
+        fullname = $('input[name="fullname"]').val()
+        email = $('input[name="email"]').val()
+        code = "google aqui"
+
+        if(fullname.length == 0){
+            $("#alerta-jquery").html("Preencha o nome completo").show(400)
+        }
+        else if(username.length == 0){
+            $("#alerta-jquery").html("Preencha o username").show(400)
+        }
+        else if(email.length == 0){
+            $("#alerta-jquery").html("Preencha o email").show(400)
+        }
+        else if(password.length == 0){
+            $("#alerta-jquery").html("Preencha a sua senha").show(400)
+        }else{
+            $.ajax({
+                method: 'post',
+                url: '/api/register',
+                data: JSON.stringify({"username": username, "password": password, "code": code, "fullname": fullname, "email": email, "code": code}),
+                beforeSend: function(){
+                    $("#alerta-jquery").hide(0)
+                    $(btn).prop("disabled", "disabled")
+                },
+                complete: function(){
+                    $("#alerta-jquery").hide(8000)
+                    $(btn).prop("disabled", "")
+                },
+                success: function(data){
+                    window.location.replace(data["redirect_to"])
+                },
+                error: function(xhr, status, error){
+                    data = xhr.responseJSON
+                    $("#alerta-jquery").html(data["error"]).show(400)
+                }
+            })
+        }
+    }
 </script>
 </body>
 </html>
