@@ -1,0 +1,253 @@
+{{ template "user_header.html" . }}
+<div class="container-lg px-4">
+    <div class="row g-4">
+      <div class="col-sm-6 col-xl-3">
+         <div class="card text-white bg-danger-gradient">
+            <div class="card-body pb-0 d-flex justify-content-between align-items-start">
+               <div>
+                  <div class="fs-4 fw-semibold">
+                     BOT
+                  </div>
+                  <div data-coreui-i18n="tot_users">
+                     <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="status_bot" name="status_bot">
+                     </div>
+                  </div>
+               </div>
+               <div class="dropdown">
+                  <button class="btn btn-transparent text-white p-0" type="button" data-coreui-toggle="dropdown"
+                     aria-haspopup="true" aria-expanded="false">
+                     <svg class="icon">
+                        <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-options"></use>
+                     </svg>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#"
+                        data-coreui-i18n="action">Action</a><a class="dropdown-item" href="#"
+                        data-coreui-i18n="anotherAction">Another action</a><a class="dropdown-item" href="#"
+                        data-coreui-i18n="somethingElseHere">Something else here</a></div>
+               </div>
+            </div>
+            <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;">
+               <canvas class="chart" id="card-chart4" height="140" width="609"
+                  style="display: block; box-sizing: border-box; height: 70px; width: 304px;"></canvas>
+            </div>
+         </div>
+      </div>
+      <!-- /.col-->
+       <div class="col-sm-6 col-xl-3">
+          <div class="card text-white bg-primary-gradient" onclick="alert(1)">
+             <div class="card-body pb-0 d-flex justify-content-between align-items-start">
+                <div>
+                   <div class="fs-4 fw-semibold">
+                      $20k
+                      <span class="fs-6 fw-normal">
+                         (-12.4%)
+                      </span>
+                   </div>
+                   <div data-coreui-i18n="users">Ganhos Hoje</div>
+                </div>
+                <div class="dropdown">
+                   <button class="btn btn-transparent text-white p-0" type="button" data-coreui-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <svg class="icon">
+                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-options"></use>
+                      </svg>
+                   </button>
+                   <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#"
+                         data-coreui-i18n="action">Action</a><a class="dropdown-item" href="#"
+                         data-coreui-i18n="anotherAction">Another action</a><a class="dropdown-item" href="#"
+                         data-coreui-i18n="somethingElseHere">Something else here</a></div>
+                </div>
+             </div>
+             <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;">
+                <canvas class="chart" id="card-chart1" height="140" width="609"
+                   style="display: block; box-sizing: border-box; height: 70px; width: 304px;"></canvas>
+             </div>
+          </div>
+       </div>
+       <!-- /.col-->
+       <div class="col-sm-6 col-xl-3">
+          <div class="card text-white bg-info-gradient">
+             <div class="card-body pb-0 d-flex justify-content-between align-items-start">
+                <div>
+                   <div class="fs-4 fw-semibold">
+                      $29K
+                   </div>
+                   <div data-coreui-i18n="deposito">Ganhos na Semana</div>
+                </div>
+                <div class="dropdown">
+                   <button class="btn btn-transparent text-white p-0" type="button" data-coreui-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <svg class="icon">
+                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-options"></use>
+                      </svg>
+                   </button>
+                   <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#"
+                         data-coreui-i18n="action">Action</a><a class="dropdown-item" href="#"
+                         data-coreui-i18n="anotherAction">Another action</a><a class="dropdown-item" href="#"
+                         data-coreui-i18n="somethingElseHere">Something else here</a></div>
+                </div>
+             </div>
+             <div class="c-chart-wrapper mt-3 mx-3" style="height:70px;">
+                <canvas class="chart" id="card-chart2" height="140" width="609"
+                   style="display: block; box-sizing: border-box; height: 70px; width: 304px;"></canvas>
+                <div class="chartjs-tooltip" style="opacity: 0; left: 130px; top: 123.125px;">
+                   <table style="margin: 0px;">
+                      <thead class="chartjs-tooltip-header">
+                         <tr class="chartjs-tooltip-header-item" style="border-width: 0px;">
+                            <th style="border-width: 0px;">April</th>
+                         </tr>
+                      </thead>
+                      <tbody class="chartjs-tooltip-body">
+                         <tr class="chartjs-tooltip-body-item">
+                            <td style="border-width: 0px;"><span
+                                  style="background: rgb(51, 153, 255); border-color: rgba(255, 255, 255, 0.55); border-width: 2px; margin-right: 10px; height: 10px; width: 10px; display: inline-block;"></span>My
+                               First dataset: 17</td>
+                         </tr>
+                      </tbody>
+                   </table>
+                </div>
+             </div>
+          </div>
+       </div>
+       <!-- /.col-->
+       <div class="col-sm-6 col-xl-3">
+          <div class="card text-white bg-warning-gradient">
+             <div class="card-body pb-0 d-flex justify-content-between align-items-start">
+                <div>
+                   <div class="fs-4 fw-semibold">
+                      $20k
+                   </div>
+                   <div data-coreui-i18n="conversionRate">Créditos</div>
+                </div>
+                <div class="dropdown">
+                   <button class="btn btn-transparent text-white p-0" type="button" data-coreui-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <svg class="icon">
+                         <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-options"></use>
+                      </svg>
+                   </button>
+                   <div class="dropdown-menu dropdown-menu-end"><a class="dropdown-item" href="#"
+                         data-coreui-i18n="action">Action</a><a class="dropdown-item" href="#"
+                         data-coreui-i18n="anotherAction">Another action</a><a class="dropdown-item" href="#"
+                         data-coreui-i18n="somethingElseHere">Something else here</a></div>
+                </div>
+             </div>
+             <div class="c-chart-wrapper mt-3" style="height:70px;">
+                <canvas class="chart" id="card-chart3" height="140" width="673"
+                   style="display: block; box-sizing: border-box; height: 70px; width: 336px;"></canvas>
+             </div>
+          </div>
+       </div>
+       <!-- /.col-->
+    </div>
+
+    <!-- /.row-->
+    <div class="row my-4">
+       <div class="col-md-12">
+          <div class="card mb-4">
+             <div class="card-header" data-coreui-i18n="monitoramento">Ganhos</div>
+             <div class="card-body">
+                <div class="table-responsive">
+                   <table class="table border mb-0">
+                      <thead class="fw-semibold text-nowrap">
+                         <tr class="align-middle">
+                            <th class="bg-body-secondary text-center">#</th>
+                            <th class="bg-body-secondary text-center" data-coreui-i18n="par">Par</th>
+                            <th class="bg-body-secondary" data-coreui-i18n="exchange">Exchange</th>
+                            <th class="bg-body-secondary" data-coreui-i18n="data">Data</th>
+                            <th class="bg-body-secondary text-center" data-coreui-i18n="lucro">Profit</th>
+                            <th class="bg-body-secondary text-center" data-coreui-i18n="taxa">Taxa</th>
+                            <th class="bg-body-secondary text-center" data-coreui-i18n="taxa">Lucro</th>
+                         </tr>
+                      </thead>
+                      <tbody>
+                         <tr class="align-middle">
+                            <!-- lucro, data, exchange, user, par, id -->
+                            <td>1</td>
+                            <td>BTC/USDT</td>
+                            <td>Binance</td>
+                            <td>08/04/2025 T 16:20</td>
+                            <td>+$3.5</td>
+                            <td>-$0.1</td>
+                            <td>$3.4</td>
+                         </tr>
+                      </tbody>
+                   </table>
+                </div>
+                <nav aria-label="Page navigation example">
+                   <ul class="pagination">
+                     <li class="page-item">
+                       <a class="page-link" href="#" aria-label="Previous">
+                         <span aria-hidden="true">&laquo;</span>
+                       </a>
+                     </li>
+                     <li class="page-item"><a class="page-link" href="#">1</a></li>
+                     <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+                     <li class="page-item"><a class="page-link" href="#">3</a></li>
+                     <li class="page-item">
+                       <a class="page-link" href="#" aria-label="Next">
+                         <span aria-hidden="true">&raquo;</span>
+                       </a>
+                     </li>
+                   </ul>
+               </nav>
+             </div>
+          </div>
+       </div>
+    </div>
+    <!-- /.col-->
+
+    <!-- /.row-->
+    <div class="row">
+      <div class="col-md-12">
+         <div class="card mb-4">
+            <div class="card-header" data-coreui-i18n="monitoramento">Ganhos de Afiliados</div>
+            <div class="card-body">
+               <div class="table-responsive">
+                  <table class="table border mb-0">
+                     <thead class="fw-semibold text-nowrap">
+                        <tr class="align-middle">
+                           <th class="bg-body-secondary text-center" scope="col">#</th>
+                           <th class="bg-body-secondary text-center" scope="col">Username</th>
+                           <th class="bg-body-secondary" scope="col">Depositou</th>
+                           <th class="bg-body-secondary" scope="col">Ganho</th>
+                           <th class="bg-body-secondary text-center" scope="col">Data</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr class="align-middle">
+                           <!-- lucro, data, exchange, user, par, id -->
+                           <th scope="row">1</th>
+                           <td>@decarteao</td>
+                           <td>$100</td>
+                           <td>+$10</td>
+                           <td>08/04/2025 T 21:45</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+               <nav aria-label="Page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                      </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                      </a>
+                    </li>
+                  </ul>
+              </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- /.col-->
+ </div>
+{{ template "user_footer.html" . }}

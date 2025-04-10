@@ -1,0 +1,89 @@
+{{ template "admin_header.html" . }}
+<div class="container-lg px-4">
+    <div class="mt-2" style="margin-bottom: 2.5rem;">
+        <h1>Gerenciamento de Usuários</h1>
+    </div>
+    <div class="my-4">
+        <input type="text" id="username" class="form-control" placeholder="Digite o id ou username da conta" style="width: 100%;">
+    </div>
+    <div class="table-responsive">
+        <table class="table list-users">
+            <thead>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Criado</th>
+                <th>Status</th>
+                <th>Saldo</th>
+                <th>Act.</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Rene Teixeira</td>
+                    <td>@decarteao</td>
+                    <td>decartecussenha@gmail.com</td>
+                    <td>08/04/2025 T 17:58</td>
+                    <td><span class="text-light bg-success border rounded p-1" style="font-size: 10pt;">confirmado</span></td>
+                    <td>$20</td>
+                    <td><button onclick="abrirModal(this)" idUser="1" name="Rene Teixeira" username="decarteao" email="decartecussenha@gmail.com" saldo="20"><img src="/static/svgs/edit.svg" alt="" style="width: 1.3rem;"></button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Decarte Cussenha</td>
+                    <td>@helio3ao</td>
+                    <td>protocoligris@gmail.com</td>
+                    <td>08/04/2025 T 17:58</td>
+                    <td><span class="text-light bg-success border rounded p-1" style="font-size: 10pt;">confirmado</span></td>
+                    <td>$20</td>
+                    <td><button onclick="abrirModal(this)" idUser="2" name="Decarte Cussenha" username="helio3ao" email="protocoligris@gmail.com" saldo="20"><img src="/static/svgs/edit.svg" alt="" style="width: 1.3rem;"></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link text-light" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- modal de edicao do user -->
+<div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="modalEditLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalEditLabel">Editar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" class="form-control" name="nome" placeholder="Nome aqui" required>
+          <input type="text" class="form-control my-2" name="username" placeholder="Username aqui" required>
+          <input type="text" class="form-control" name="email" placeholder="Email" required>
+          <!-- esquema de zerar ou adicionar saldo -->
+          <input type="number" name="saldo" id="saldo" class="form-control my-2" step="0.01" min="0.01" required>
+          <!-- botao para resetar a senha -->
+           <button type="button" class="btn btn-danger w-100">Resetar senha</button>
+          <!-- o usuario podera alterar a senha no seu painel -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Salvar</button>
+        </div>
+      </div>
+    </div>
+</div>
+{{ template "admin_footer.html" . }}

@@ -1,0 +1,62 @@
+{{ template "user_header.html" . }}
+<div class="container-lg px-4">
+    <div class="mt-2 mb-4" style="margin-bottom: 2.5rem;">
+        <h1><img src="/static/svgs/bot.svg" alt="" style="width: 2.5rem;"> Setup do BOT <img src="/static/svgs/bot.svg" alt="" style="width: 2.5rem;"></h1>
+    </div>
+
+    <form method="post">
+        <label for="distorcao">Distorção de mercado(%)</label>
+        <input type="number" name="distorcao" id="distorcao" class="form-control" aria-describedby="distorcaoDescribe" step="0.01" min="0.01">
+        <div id="distorcaoDescribe" class="form-text mb-3">
+        Coloque um valor aqui, para o bot poder fazer as entradas
+        </div>
+
+        <div class="my-2 d-flex">
+            <input type="checkbox" name="binance" id="binance">&nbsp;
+            <label for="binance">Binance</label>&nbsp;&nbsp;
+
+            <input type="checkbox" name="bybit" id="bybit">&nbsp;
+            <label for="bybit">Bybit</label>&nbsp;&nbsp;
+
+            <input type="checkbox" name="bitget" id="bitget">&nbsp;
+            <label for="bitget">Bitget</label>&nbsp;&nbsp;
+
+            <input type="checkbox" name="okx" id="okx">&nbsp;
+            <label for="okx">OKX</label>
+        </div>
+
+        <!-- Valor de Entrada & stops & n de entradas -->
+        <label for="valor_de_entrada" class="mt-3">Valor de entrada</label>
+        <input type="number" name="valor_de_entrada" id="valor_de_entrada" step="0.01" min="10.5" class="form-control" placeholder="Valor de entrada em USDT">
+        
+        <label for="stop_gain" class="mt-3">Stop Gain(%): <span class="text-success" id="calc_stop_gain">0</span></label>
+        <input type="number" name="stop_gain" id="stop_gain" step="0.01" min="0.5" class="form-control" placeholder="Insira o Stop Gain">
+        
+        <label for="stop_loss" class="mt-3">Stop Loss(%): <span class="text-danger" id="calc_stop_loss">0</span></label>
+        <input type="number" name="stop_loss" id="stop_loss" step="0.01" min="0.5" class="form-control" placeholder="Insira o Stop Loss">
+
+        <label for="n_entradas" class="mt-3">N. de Entradas</label>
+        <input type="number" name="n_entradas" id="n_entradas" step="1" min="1" max="10" class="form-control" placeholder="N. de entradas">
+        
+        <!-- Niveis de alavancagem -->
+        <h4 class="mt-4 mb-1">Martingale</h4>
+
+        <label for="nivel_1" class="mt-3">Nível 1:</label>
+        <input type="number" name="nivel_1" id="nivel_1" step="0.01" min="0" class="form-control" placeholder="Insira o valor do nível 1">
+        
+        <label for="nivel_2" class="mt-3">Nível 2:</label>
+        <input type="number" name="nivel_2" id="nivel_2" step="0.01" min="0" class="form-control" placeholder="Insira o valor do nível 2">
+        
+        <label for="nivel_3" class="mt-3">Nível 3:</label>
+        <input type="number" name="nivel_3" id="nivel_3" step="0.01" min="0" class="form-control" placeholder="Insira o valor do nível 3">
+        
+        <label for="nivel_4" class="mt-3">Nível 4:</label>
+        <input type="number" name="nivel_4" id="nivel_4" step="0.01" min="0" class="form-control" placeholder="Insira o valor do nível 4">
+        
+        <label for="nivel_5" class="mt-3">Nível 5:</label>
+        <input type="number" name="nivel_5" id="nivel_5" step="0.01" min="0" class="form-control" placeholder="Insira o valor do nível 5">
+        
+        <button type="submit" class="mt-4 btn btn-success text-light">Salvar</button>
+    </form>
+ </div>
+{{ template "user_footer.html" . }}

@@ -1,0 +1,56 @@
+
+</div>
+</div>
+
+<!--===============================================================================================-->
+<script src="/static/js/jquery.js"></script>
+<!--===============================================================================================-->
+<script src="/static/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+<script src="vendor/select2/select2.min.js"></script>
+<script>
+    $(".selection-2").select2({
+        minimumResultsForSearch: 20,
+        dropdownParent: $('#dropDownSelect1')
+    });
+</script>
+<!--===============================================================================================-->
+<script src="/static/js/moment.min.js"></script>
+<!--===============================================================================================-->
+<script src="/static/js/login_cadastro.js"></script>
+
+<script src="/static/js/jquery.js"></script>
+<script>
+    function login(btn){
+        username = $('input[name="username"]').val()
+        password = $('input[name="password"]').val()
+        code = "google aqui"
+        remember_me = $("#remember-me").prop("checked")
+
+        $.ajax({
+            method: 'post',
+            url: '/api/login',
+            data: JSON.stringify({"username": username, "password": password, "code": code, "remember_me": remember_me}),
+            beforeSend: function(){
+                $("#alerta-jquery").hide(0)
+                $(btn).prop("disabled", "disabled")
+            },
+            complete: function(){
+                $("#alerta-jquery").hide(8000)
+                $(btn).prop("disabled", "")
+            },
+            success: function(data){
+                window.location.replace(data["redirect_to"])
+            },
+            error: function(xhr, status, error){
+                data = xhr.responseJSON
+                $("#alerta-jquery").html(data["error"]).show(400)
+            }
+        })
+    }
+</script>
+</body>
+</html>

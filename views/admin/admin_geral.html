@@ -1,0 +1,96 @@
+{{ template "admin_header.html" . }}
+<div class="container-lg px-4">
+    <div class="mt-2 mb-4" style="margin-bottom: 2.5rem;">
+        <h1>Configurações</h1>
+    </div>
+
+    <form method="post">
+        <label for="timeframe" class="form-label">Timeframe</label>
+        <select name="timeframe" id="timeframe" class="form-control" aria-describedby="timeframeHelpBlock">
+            <option>1M</option>
+            <option>5M</option>
+            <option>15M</option>
+            <option>30M</option>
+            <option>1H</option>
+            <option>2H</option>
+            <option>4H</option>
+        </select>
+        <div id="timeframeHelpBlock" class="form-text mb-3">
+        Deve escolher um timeframe para que as entradas se efectuem.
+        </div>
+
+        <!-- Media Movel -->
+        <label for="media" class="form-label">Média Móvel</label>
+        <div class="d-md-flex d-xl-flex d-xxl-flex d-lg-flex">
+            <div>
+                <select name="tipo" id="tipo" class="form-control" style="max-width: 100%;">
+                    <option>Close</option>
+                    <option>Open</option>
+                    <option>High</option>
+                    <option>Low</option>
+                </select>
+            </div>&nbsp;&nbsp;&nbsp;
+            <div>
+                <input type="number" name="media" id="media" class="form-control" placeholder="Insira a sua média movel">
+            </div>
+        </div>
+
+        <!-- Ganhe % em cada depósito -->
+        <label for="afiliado_percentage" class="form-label my-2">Ganho de afilhados(%)</label>
+        <input type="number" name="afiliado_percentage" id="afiliado_percentage" step="0.01" min="0.1" class="form-control" placeholder="Perc.(%) de ganhos afiliados">
+
+        <!-- Escolhe entre seguir tendencia ou ir contra tendencia -->
+        <label for="tendencia" class="form-label my-2">Tendência</label>
+        <select name="tendencia" id="tendencia" class="form-control">
+            <option value="0">A Favor</option>
+            <option value="1">Contra</option>
+        </select>
+
+        <!-- SEO -->
+        <div id="seo" class="my-4">
+            <h3>SEO</h3><hr>
+
+            <div class="mt-2">
+                <h5 class="mb-2">#Landing Page</h5>
+
+                <label for="description_lp">Description</label>
+                <input type="text" name="description_lp" id="description_lp" class="form-control mb-1" placeholder="Preencha o description da página">
+
+                <label for="keywords_lp">Keywords</label>
+                <input type="text" name="keywords_lp" id="keywords_lp" class="form-control mb-1" placeholder="Preencha as keywords da página">
+
+                <label for="og_title">og:title</label>
+                <input type="text" name="og_title" id="og_title" class="form-control mb-1" placeholder="Preencha o og:title da página para redes sociais">
+
+                <label for="og_description">og:description</label>
+                <input type="text" name="og_description" id="og_description" class="form-control mb-1" placeholder="Preencha o og:description da página para redes sociais">
+
+                <label for="keywords_lp">Keywords</label>
+                <input type="text" name="keywords_lp" id="keywords_lp" class="form-control mb-1" placeholder="Preencha as keywords da página">
+            </div>
+
+            <div class="mt-4 mb-1">
+                <h5 class="mb-2">#Login & Singup</h5>
+
+                <label for="description_lp">Description</label>
+                <input type="text" name="description_lp" id="description_lp" class="form-control mb-1" placeholder="Preencha o description da página">
+
+                <label for="keywords_lp">Keywords</label>
+                <input type="text" name="keywords_lp" id="keywords_lp" class="form-control mb-1" placeholder="Preencha as keywords da página">
+
+                <label for="og_title">og:title</label>
+                <input type="text" name="og_title" id="og_title" class="form-control mb-1" placeholder="Preencha o og:title da página para redes sociais">
+
+                <label for="og_description">og:description</label>
+                <input type="text" name="og_description" id="og_description" class="form-control mb-1" placeholder="Preencha o og:description da página para redes sociais">
+
+                <label for="keywords_lp">Keywords</label>
+                <input type="text" name="keywords_lp" id="keywords_lp" class="form-control mb-1" placeholder="Preencha as keywords da página">
+            </div>
+        </div>
+
+        <button type="submit" class="mt-4 btn btn-success">Salvar</button>
+    </form>
+</div>
+
+{{ template "admin_footer.html" . }}

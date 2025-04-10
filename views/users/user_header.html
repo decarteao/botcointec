@@ -1,0 +1,72 @@
+<html lang="pt-BR" data-coreui-theme="light">
+   <head>
+      <base href="./">
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+      <title>{{ .title }} | Dashboard | Botcointec</title>
+      <link rel="favicon" href="/static/img/favicon.ico">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="/static/img/favicon.ico">
+      <meta name="theme-color" content="#ffffff">
+      <!-- Vendors styles-->
+      <link rel="stylesheet" href="/static/css/simplebar.css">
+      <!-- Main styles for this application-->
+      <link href="/static/css/style_dashboard.css" rel="stylesheet">
+      <!-- We use those styles to show code examples, you should remove them in your application.-->
+      <link href="/static/css/extend_dashboard.css" rel="stylesheet">
+      <script src="/static/js/color-modes-dashboard.js"></script>
+
+      <link href="/static/css/coreui-chartjs.css" rel="stylesheet">
+   </head>
+   <body>
+      <div class="wrapper d-flex flex-column min-vh-100">
+         <header class="header header-sticky p-0 mb-4">
+            <div class="container-fluid px-4 border-bottom">
+               <ul class="header-nav d-none d-md-flex">
+                  <li class="nav-item"><a class="nav-link" href="/dashboard" data-coreui-i18n="dashboard">Dashboard</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/dashboard/setup" data-coreui-i18n="users">Setup</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/dashboard/depositos" data-coreui-i18n="settings">Depósitos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/dashboard/afiliados" data-coreui-i18n="settings">Afiliados</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/dashboard/geral" data-coreui-i18n="settings">Geral</a></li>
+               </ul>
+               <ul class="header-nav d-none d-md-flex ms-auto">
+
+               </ul>
+               <ul class="header-nav ms-auto ms-md-0">
+                  <li class="nav-item py-1">
+                     <div class="vr h-100 mx-2 text-body text-opacity-75"></div>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link py-0" data-coreui-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <div class="avatar avatar-md"><img class="avatar-img bg-light" src="/static/img/favicon.ico"></div>
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-end pt-0">
+                        <div class="dropdown-header bg-body-tertiary text-body-secondary fw-semibold rounded-top mb-2" data-coreui-i18n="account">Conta</div>
+                        <a class="dropdown-item" href="/dashboard">
+                           <span data-coreui-i18n="widthdraw"><img src="/static/svgs/home.svg" alt="" style="width: 1.3rem;"> Dashboard</span>
+                        </a>
+                        <div class="dropdown-header bg-body-tertiary text-body-secondary fw-semibold my-2" data-coreui-i18n="settings">Configurações</div>
+                        <a class="dropdown-item" href="/dashboard/setup">
+                           <span data-coreui-i18n="mediamoveis"><img src="/static/svgs/setup.svg" alt="" style="width: 1.3rem;"> Setup</span>
+                        </a>
+                        <a class="dropdown-item" href="/dashboard/depositos">
+                           <span data-coreui-i18n="seo"><img src="/static/svgs/deposit.svg" alt="" style="width: 1.3rem;"> Depósitos</span>
+                        </a>
+                        <a class="dropdown-item" href="/dashboard/afiliados">
+                           <span data-coreui-i18n="other_configs"><img src="/static/svgs/people.svg" alt="" style="width: 1.3rem;"> Afiliados</span>
+                        </a>
+                        <a class="dropdown-item" href="/dashboard/geral">
+                           <span data-coreui-i18n="other_configs"><img src="/static/svgs/config.svg" alt="" style="width: 1.3rem;"> Outras Configs</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/dashboard/logout">
+                           <span data-coreui-i18n="logout"><img src="/static/svgs/quit.svg" alt="" style="width: 1.3rem;"> Sair</span>
+                        </a>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+         </header>
+         <div class="body flex-grow-1">
+            

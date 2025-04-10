@@ -1,0 +1,63 @@
+## GoLang
+
+MySQL do Email: H3li03.AO.@ <- postmaster@botcointec.com.br
+Email credentials: no-reply@botcointec.com.br ? RtXF.8G5AjfhapQvHDdn76
+
+Vou precisar das libs:
+	- Gin - para web
+	- github.com/golang-jwt/jwt/v5 - para autenticacao
+	' golang.org/x/crypto/bcrypt - para melhorar a criptografia das senhas
+	- Gorm - para mysql
+	- Gorilla/Websocket - para monitorar os precos das casas
+	- É uma lib para processar os templates
+	- Um mail server funcionando o smtp para envio de emails de confirmacao
+	- github.com/ethereum/go-ethereum - para o Gateway de Pagamentos
+	- github.com/miguelmota/go-ethereum-hdwallet - para Gerar as carteiras deterministicas
+
+Passos:
+	- Fazer as logos - OK
+	- Fazer as paginas de login e cadastro - OK
+
+	- Fazer as telas do Admin
+		- Index(total de usuarios, usuarios operando(com status em true), ganhos no ultimos 30, 15 e 7 dias, ganhos hoje, historico de ganhos)
+		- Gerencimaneto dos usuarios(poder gerenciar tudo do usuario, desde senha ate taxa que tem que pagar a cada trading com sucesso)
+		- Configs(setar o timeframe e as medias moveis pelo admin e passar no user, seguir tendencia ou ir/contra)
+		- Configurador de SEO da landing page, login e cadastro
+		- Sacar fundos
+	- Fazer as telas do user:
+		- Index(Gaxnhos hoje, ganhos na semana, creditos depositados - com btn que abre modal para depositar mais, outro btn para ganhar com afilhados, historico de gains)
+		- Config(Configurar as APIS das CEXs, username do telegram)
+		- Setup(Setar x% de afastamento para entrar(distorcao de mercado),
+		setar stop loss e stop gain, fazer tralling stop, valor de entrada em usdt,
+		uma parte tbm de escolher os niveis de alavancagem)
+		- Depositos(historico de depositos)
+		- Afiliados
+
+		# ao botar o stop loss %, mostrar ao lado quanto pode perder em usdt
+		# ao botar o stop gain %, mostrar ao lado quanto pode perder em usdt
+		# fazer resume das operacoes abertas, caso o sistema caia 
+		# novas configuracoes setadas pelo usuario deve valer apenas para novas estradas
+
+	- Criar as ligacoes das telas
+		- Manipular Cookies
+		- Criar o autenticador JWT
+
+	- Criar o crud com as tabelas: user(role: admin ou user), pagamentos(user_id, montante_usdt, status: 0 - pendente | 1 - pago | 2 - expirado, priv_key), 
+			operacoes, seo_page(file_name, descriptor seo e mais uma porrada)
+	- Criar o Gateway de Pagamentos na rede da Polygon(usando mnemonic para gerar carteiras sucessivas)
+		- O user seta um valor para o pagamento
+		- Abre uma tela com o valor, carteira e qrcode, e um tempo de 15min esperando, se ultrapassar esse perido, deve dar status de expirado.
+	
+	- Fazer a landing page
+
+Últimos passos:
+	- Criar as logicas do bot no backend
+	- Deve abrir sempre concorrencia de cada user com saldo valido e o statusbot ativo
+	- Para cada operacao aberta e fechada, deve dar um alerta no telegram	
+	- Avaliar o sistema
+
+MAILER:
+URL: https://postale.io/done/kaihovpn.site/mx/
+Username	decarte@kaihovpn.site
+Password	gnQDCRAPeAqxhqRQ4sur
+

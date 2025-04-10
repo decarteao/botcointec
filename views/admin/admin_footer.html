@@ -1,0 +1,49 @@
+
+</div>
+<footer class="footer px-4">
+   <div class="ms-auto">Powered by&nbsp;<a href="https://github.com/decarteao" class="text-decoration-none" target="_blank">HÉLIO3.AO</a></div>
+</footer>
+</div>
+<!-- CoreUI and necessary plugins-->
+<script src="/static/js/coreui.bundle.min.js"></script>
+<script src="/static/js/simplebar.min.js"></script>
+<script src="/static/js/i18next.min.js"></script>
+<script src="/static/js/i18nextHttpBackend.js"></script>
+<script src="/static/js/i18nextBrowserLanguageDetector.js"></script>
+<script src="/static/js/i18next.js"></script>
+<script>
+const header = document.querySelector('header.header');
+
+document.addEventListener('scroll', () => {
+  if (header) {
+    header.classList.toggle('shadow-sm', document.documentElement.scrollTop > 0);
+  }
+});
+</script>
+<!-- Plugins and scripts required by this view-->
+<script src="/static/js/chart.umd.js"></script>
+<script src="/static/js/coreui-chartjs.js"></script>
+<script src="/static/js/admin_index.js"></script>
+<script src="/static/js/admin_main.js"></script>
+<script src="/static/js/bootstrap.js"></script>
+<script src="/static/js/jquery.js"></script>
+<script>
+  function abrirModal(btn) {
+    // passar os dados das tags do btn pro modal
+    name = $(btn).attr("name")
+    $(".modal-content input[name=\"nome\"]").val(name)
+    username = $(btn).attr("username")
+    $(".modal-content input[name=\"username\"]").val(username)
+    email = $(btn).attr("email")
+    $(".modal-content input[name=\"email\"]").val(email)
+    saldo = $(btn).attr("saldo")
+    $(".modal-content input[name=\"saldo\"]").val(saldo)
+
+    // abrir o modal
+    const modalEdit = new bootstrap.Modal(document.getElementById('modalEdit'));
+    modalEdit.show();
+  }
+</script>
+<script></script><iframe height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+</body>
+</html>

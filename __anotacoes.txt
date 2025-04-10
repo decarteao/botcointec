@@ -1,0 +1,42 @@
+Projecto: Sistema Automatizado de Negociacoes de Criptomoedas
+Prazo: 17/Abril/2025
+Orcamento: 870 USDT
+
+Tecnologias: GoLang(focado em desempenho no backend), MySQL(para gerenciamento de dados) e Bootstrap5(para o frontend).
+
+Funcionara nas Cexs: Binance, Bybit, Okx e Bitget.
+Gateway de pagamentos na rede da Polygon.
+
+Tera sistema de afiliados, onde quem abrir com referido, o referido recebera x% em cada plano que o usuario fizer. Isso definido pelo admin.
+
+Mais detalhes do projeto:
+
+	1 - Realizar operacoes no Futures
+	2 - Monitorar os precos dos ativos do mercado de cripto, pelo indicador de MediaMovel(deve entrar em operacao assun que o preco se afastar x% - definido pelo user, 
+		das medias moveis). Se for acima, compra. Se for abaixo, vende.
+	3 - Se o preco ficar afastado do ponto contrario de entrada, deve fazer novas entradas para formar preco medio(deve ser definido em % e volume).
+	4 - Escolher: seguir tendencia ou ir contra
+	5 - Stop Loss e Gain
+	6 - Trailling Stop
+
+
+Paginas do Admin
+	- Index(total de usuarios, usuarios operando(com status em true), ganhos no ultimos 30, 15 e 7 dias, ganhos hoje, historico de ganhos)
+	- Users(poder gerenciar tudo do usuario, desde senha ate taxa que tem que pagar a cada trading com sucesso)
+
+Paginas do User:
+	- Index(Ganhos hoje, ganhos na semana, creditos depositados - com btn que abre modal para depositar mais, outro btn para ganhar com afilhados, historico de gains)
+	- Config(Configurar as APIS das CEXs, username do telegram)
+	- Setup(Configurar as medias moveis, x% de diferenca para entrar, seguir tendencia ou ir/contra, setar stop loss e stop gain, fazer tralling stop, valor de entrada em usdt, uma parte
+		tbm de escolher os niveis de alavancagem)
+
+Pagina de Apresentacao:
+	- Index(tem que ser bonito e responsivo)
+
+
+
+
+
+
+
+
